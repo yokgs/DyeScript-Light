@@ -15,6 +15,6 @@ dyec -p myfile.dye -o ./dist/css
 
 ## License
 
-GPL 3.0 
+Apache 2.0
 
 Copyright (c) 2023-present, Yazid Slila (yokgs)
