@@ -1,6 +1,6 @@
 {
-  "name": "dyelite",
-  "version": "1.0.0",
+  "name": "@yokgs/dyescript-light",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,9 @@
   },
   "keywords": [],
   "author": "Yazid Slila",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bin": {
-    "dyec": "./index.js",
-    "dyev": "./visualize.js"
-
+    "dyec": "./index.js"
   },
   "dependencies": {
     "yargs": "^17.7.1"

@@ -228,9 +228,9 @@ for (let i in targets) {
 console.log(styles, root0, classes, targets)
 
 let css = `/**
-    Generated using DyeScript Lite 
+    Generated using DyeScript Light 
     by Yazid Slila (@yokgs)
-*/`, min = `/** Generated using DyeScript Lite 
+*/`, min = `/** Generated using DyeScript Light 
 by Yazid Slila (@yokgs) */\n`;
 
 for (let el in fonts) {
