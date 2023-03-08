@@ -103,7 +103,7 @@ const _best = ps => {
     let max = 0, mi = 0;
 
     ps.map((x, i) => {
-        if (x[0] > max) { max = x[0]; mi = i }
+        if (x[1] > max) { max = x[1]; mi = i }
     })
 
     return ps[mi][0];
@@ -140,6 +140,7 @@ let fonts = {};
 let root0 = {};
 
 function _compile(pathh) {
+    if(!fs.existsSync(pathh)) throw new Error(pathh + ' does not exist');
     let dye = fs.readFileSync(pathh).toString();
     let oo = _optimize(_split(dye));
     console.log(oo)
@@ -188,7 +189,10 @@ function _compile(pathh) {
                 break;
             case '@@':
             case 'import':
-                _compile(r);
+                if(/^<[\w\-\.]+>$/.test(r)){
+                    _compile('./dye.rectory/'+r.slice(1, r.length -1)+'.dye');
+                }
+                else _compile(r);
                 break;
             default:
                 if (/\$[\w\-]+/.test(cmd)) {
@@ -208,7 +212,7 @@ function _compile(pathh) {
     }
 }
 _compile(options.path);
-console.log(styles, root0, classes, targets)
+//console.log(styles, root0, classes, targets)
 for (let i in targets) {
     let target = targets[i];
     for (let el of target) {
@@ -225,7 +229,7 @@ for (let i in targets) {
         }
     }
 }
-console.log(styles, root0, classes, targets)
+//console.log(styles, root0, classes, targets)
 
 let css = `/**
     Generated using DyeScript Light 
@@ -242,7 +246,7 @@ for (let el in root0) {
     styles[':root']['--' + el] = [[root0[el], 0]];
 }
 
-console.log(styles, root0, classes, targets)
+//console.log(JSON.stringify(styles), root0, classes, targets)
 
 for (let el in styles) {
     css += `\n\n${el} {\n`;
