@@ -12,7 +12,12 @@ const options = yargs
     .option("o", { alias: "output", describe: "The path of the output directory", type: "string", demandOption: false })
     .argv;
 
-
+// if (!fs.existsSync(options.path + '.dye')) {
+//     if (!fs.existsSync(path.join(origin, options.path + '/index.dye'))) 0;
+//         //throw new Error(options.path + ' does not exist');
+//     else options.path += '/index.dye'
+// } else 
+options.path += '.dye'
 let name = 'dye.compiled.css'
 if (options.path) {
     let r = options.path.split(/[\\|\/]+/).pop();
@@ -74,18 +79,6 @@ const _optimize = (mx) => {
                 start = j;//[i, j];
             } else if (/[\w\W]*"$/.test(command[j])) {
                 el = mx[i].slice(start, j + 1).join(' ');
-                /*for (let tt = start[0]; tt <= i; tt++) {
-
-                    let yy = start[0] == i;
-                    el = (yy
-                        ? mx[i].splice(start[1], j)
-                        : (tt == start[0]
-                            ? mx[i].splice(start[1])
-                            : (tt == i
-                                ? mx[tt].splice(0, j)
-                                : mx[tt]))).join(' ').slice(1);  
-                }*/
-
                 el = el.slice(1, el.length - 1);
                 mx[i] = [...mx[i].slice(0, start), el, ...mx[i].slice(j + 1)];
                 j = 0;
@@ -130,8 +123,6 @@ const _variables = (str) => {
 }
 
 
-
-
 let styles = { ":root": {} }
 let classes = {};
 let targets = {};
@@ -139,16 +130,20 @@ let fonts = {};
 let root0 = {};
 
 function _compile(pathh) {
-    if (!fs.existsSync(pathh + '.dye')) {
+
+    if (!fs.existsSync(pathh)) {
+
         if (!fs.existsSync(pathh + '/index.dye'))
             throw new Error(pathh + ' does not exist');
+
         else pathh += '/index.dye'
-    } else pathh += '.dye'
+
+    } else pathh += ''
+
     let dye = fs.readFileSync(pathh).toString();
     let oo = _optimize(_split(dye));
     let code = _complete(oo);
     for (let i = 0; i < code.length; i++) {
-
         let inst = code[i];
         let cmd = inst[0];
         let r = inst[1];
@@ -192,7 +187,7 @@ function _compile(pathh) {
             case '@@':
             case 'import':
                 if (/^<[\w\-\.]+>$/.test(r)) {
-                    _compile('./dye.rectory/' + r.slice(1, r.length - 1));
+                    _compile('./dye.rectory/' + r.slice(1, r.length - 1)+'.dye');
                 }
                 else _compile(r);
                 break;
@@ -210,7 +205,6 @@ function _compile(pathh) {
                 }
                 break;
         }
-
     }
 }
 _compile(options.path);

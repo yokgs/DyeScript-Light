@@ -1,16 +1,28 @@
 {
   "name": "@yokgs/dyescript-light",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Command Line Interface of lightweight (& pre-published) version of @yokgs/DyeScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "css",
+    "command-line-tool",
+    "css-preprocessor",
+    "css-variables"
+  ],
   "author": "Yazid Slila",
   "license": "Apache 2.0",
   "bin": {
     "dyec": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/yokgs/DyeScript-Light/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yokgs/DyeScript-Light.git"
   },
   "dependencies": {
     "yargs": "^17.7.1"
