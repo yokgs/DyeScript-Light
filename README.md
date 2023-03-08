@@ -3,14 +3,16 @@ Command Line Interface of lightweight (&amp; pre-published) version of @yokgs/Dy
 
 ## Installation
 
-```
+```bash
 npm install -g @yokgs/dyescript-light
 ```
 
 ## Usage
 
-```
-dyec -p myfile.dye -o ./dist/css
+To compile `myfile.dye` and save the resulting css to `/dist/css` folder use the following command
+
+```bash
+dyec -p myfile -o ./dist/css
 ```
 
 ## License

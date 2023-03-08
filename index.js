@@ -63,17 +63,17 @@ const _split = (str) => {
 const _optimize = (mx) => {
     let start = 0;
     let el = '';
-    for (let  i= 0; i < mx.length; i++) {
+    for (let i = 0; i < mx.length; i++) {
         start = 0;
         for (let j = 0; j < mx[i].length; j++) {
             let command = mx[i];
-            if(/^"[\w\W]*"$/.test(command[j])){
+            if (/^"[\w\W]*"$/.test(command[j])) {
                 mx[i][j] = mx[i][j].slice(1, mx[i][j].length - 1);
             }
             else if (/^"[\w\W]*/.test(command[j])) {
                 start = j;//[i, j];
-            }else if (/[\w\W]*"$/.test(command[j])) {
-                el = mx[i].slice(start, j+1).join(' ');
+            } else if (/[\w\W]*"$/.test(command[j])) {
+                el = mx[i].slice(start, j + 1).join(' ');
                 /*for (let tt = start[0]; tt <= i; tt++) {
 
                     let yy = start[0] == i;
@@ -87,8 +87,8 @@ const _optimize = (mx) => {
                 }*/
 
                 el = el.slice(1, el.length - 1);
-                console.log([...mx[i].slice(0, start), el, ...mx[i].slice(j+1)])
-                mx[i] = [...mx[i].slice(0, start), el, ...mx[i].slice(j+1)];
+                console.log([...mx[i].slice(0, start), el, ...mx[i].slice(j + 1)])
+                mx[i] = [...mx[i].slice(0, start), el, ...mx[i].slice(j + 1)];
                 j = 0;
             }
         }
@@ -140,7 +140,11 @@ let fonts = {};
 let root0 = {};
 
 function _compile(pathh) {
-    if(!fs.existsSync(pathh)) throw new Error(pathh + ' does not exist');
+    if (!fs.existsSync(pathh + '.dye')) {
+        if (!fs.existsSync(pathh + '/index.dye'))
+            throw new Error(pathh + ' does not exist');
+        else pathh += '/index.dye'
+    } else pathh += '.dye'
     let dye = fs.readFileSync(pathh).toString();
     let oo = _optimize(_split(dye));
     console.log(oo)
@@ -189,8 +193,8 @@ function _compile(pathh) {
                 break;
             case '@@':
             case 'import':
-                if(/^<[\w\-\.]+>$/.test(r)){
-                    _compile('./dye.rectory/'+r.slice(1, r.length -1)+'.dye');
+                if (/^<[\w\-\.]+>$/.test(r)) {
+                    _compile('./dye.rectory/' + r.slice(1, r.length - 1));
                 }
                 else _compile(r);
                 break;
