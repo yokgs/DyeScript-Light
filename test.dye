@@ -1,13 +1,15 @@
+@@ <Margin>
+
 + cmd #dc4545
 + property #367b56
 + value #4a4a4a
 + text #363636
 + comment #8a8a8a
 
+$Margin|1 span
+
 $ span fontFamily monospace color --comment
 $ {^}.c color --cmd fontWeight 700
 $ {*}.p color --property
 $ {*}.v color --value
 $ {*}.t color --text
-
-
