@@ -87,7 +87,6 @@ const _optimize = (mx) => {
                 }*/
 
                 el = el.slice(1, el.length - 1);
-                console.log([...mx[i].slice(0, start), el, ...mx[i].slice(j + 1)])
                 mx[i] = [...mx[i].slice(0, start), el, ...mx[i].slice(j + 1)];
                 j = 0;
             }
@@ -147,7 +146,6 @@ function _compile(pathh) {
     } else pathh += '.dye'
     let dye = fs.readFileSync(pathh).toString();
     let oo = _optimize(_split(dye));
-    console.log(oo)
     let code = _complete(oo);
     for (let i = 0; i < code.length; i++) {
 
@@ -216,7 +214,6 @@ function _compile(pathh) {
     }
 }
 _compile(options.path);
-//console.log(styles, root0, classes, targets)
 for (let i in targets) {
     let target = targets[i];
     for (let el of target) {
@@ -233,7 +230,6 @@ for (let i in targets) {
         }
     }
 }
-//console.log(styles, root0, classes, targets)
 
 let css = `/**
     Generated using DyeScript Light 
@@ -249,8 +245,6 @@ for (let el in fonts) {
 for (let el in root0) {
     styles[':root']['--' + el] = [[root0[el], 0]];
 }
-
-//console.log(JSON.stringify(styles), root0, classes, targets)
 
 for (let el in styles) {
     css += `\n\n${el} {\n`;
