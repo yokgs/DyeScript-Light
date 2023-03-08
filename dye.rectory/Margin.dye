@@ -1,0 +1,4 @@
+.$ Margin|0 margin 0
+^ Margin|1 ^ .25rem
+^ Margin|2 ^ .5rem
+^ Margin|3 ^ 1rem

@@ -1,0 +1,7 @@
+.$ Block display block
+^ Inline ^ inline
+^ InlineBlock ^ inline-block
+^ Flex ^ flex
+^ Table ^ table
+^ Grid ^ grid
+^ TableCell ^ table-cell

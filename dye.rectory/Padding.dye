@@ -1,0 +1,4 @@
+.$ Padding|0 padding 0
+^ Padding|1 ^ .25rem
+^ Padding|2 ^ .5rem
+^ Padding|3 ^ 1rem
