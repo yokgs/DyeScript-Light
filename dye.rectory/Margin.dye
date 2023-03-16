@@ -1,4 +1,44 @@
 .$ Margin|0 margin 0
-^ Margin|1 ^ .25rem
-^ Margin|2 ^ .5rem
-^ Margin|3 ^ 1rem
+.$ MarginTop|0 {^}Top 0
+.$ MarginLeft|0 {*}Left 0
+.$ MarginRight|0 {*}Right 0
+.$ MarginBottom|0 {*}Bottom 0
+
+$MarginTop|0 $MarginY|0
+$MarginLeft|0 $MarginX|0
+$MarginRight|0 $MarginX|0
+$MarginBottom|0 $MarginY|0
+
+.$ Margin|1 {*} .25rem
+.$ MarginTop|1 {^}Top .25rem
+.$ MarginLeft|1 {*}Left .25rem
+.$ MarginRight|1 {*}Right .25rem
+.$ MarginBottom|1 {*}Bottom .25rem
+
+$MarginTop|1 $MarginY|1
+$MarginLeft|1 $MarginX|1
+$MarginRight|1 $MarginX|1
+$MarginBottom|1 $MarginY|1
+
+
+.$ Margin|2 {*} .5rem
+.$ MarginTop|2 {^}Top .5rem
+.$ MarginLeft|2 {*}Left .5rem
+.$ MarginRight|2 {*}Right .5rem
+.$ MarginBottom|2 {*}Bottom .5rem
+
+$MarginTop|2 $MarginY|2
+$MarginLeft|2 $MarginX|2
+$MarginRight|2 $MarginX|2
+$MarginBottom|2 $MarginY|2
+
+.$ Margin|3 {*} 1rem
+.$ MarginTop|3 {^}Top 1rem
+.$ MarginLeft|3 {*}Left 1rem
+.$ MarginRight|3 {*}Right 1rem
+.$ MarginBottom|3 {*}Bottom 1rem
+
+$MarginTop|3 $MarginY|3
+$MarginLeft|3 $MarginX|3
+$MarginRight|3 $MarginX|3
+$MarginBottom|3 $MarginY|3

@@ -1,4 +1,44 @@
 .$ Padding|0 padding 0
-^ Padding|1 ^ .25rem
-^ Padding|2 ^ .5rem
-^ Padding|3 ^ 1rem
+.$ PaddingTop|0 {^}Top 0
+.$ PaddingLeft|0 {*}Left 0
+.$ PaddingRight|0 {*}Right 0
+.$ PaddingBottom|0 {*}Bottom 0
+
+$PaddingTop|0 $PaddingY|0
+$PaddingLeft|0 $PaddingX|0
+$PaddingRight|0 $PaddingX|0
+$PaddingBottom|0 $PaddingY|0
+
+.$ Padding|1 {*} .25rem
+.$ PaddingTop|1 {^}Top .25rem
+.$ PaddingLeft|1 {*}Left .25rem
+.$ PaddingRight|1 {*}Right .25rem
+.$ PaddingBottom|1 {*}Bottom .25rem
+
+$PaddingTop|1 $PaddingY|1
+$PaddingLeft|1 $PaddingX|1
+$PaddingRight|1 $PaddingX|1
+$PaddingBottom|1 $PaddingY|1
+
+
+.$ Padding|2 {*} .5rem
+.$ PaddingTop|2 {^}Top .5rem
+.$ PaddingLeft|2 {*}Left .5rem
+.$ PaddingRight|2 {*}Right .5rem
+.$ PaddingBottom|2 {*}Bottom .5rem
+
+$PaddingTop|2 $PaddingY|2
+$PaddingLeft|2 $PaddingX|2
+$PaddingRight|2 $PaddingX|2
+$PaddingBottom|2 $PaddingY|2
+
+.$ Padding|3 {*} 1rem
+.$ PaddingTop|3 {^}Top 1rem
+.$ PaddingLeft|3 {*}Left 1rem
+.$ PaddingRight|3 {*}Right 1rem
+.$ PaddingBottom|3 {*}Bottom 1rem
+
+$PaddingTop|3 $PaddingY|3
+$PaddingLeft|3 $PaddingX|3
+$PaddingRight|3 $PaddingX|3
+$PaddingBottom|3 $PaddingY|3

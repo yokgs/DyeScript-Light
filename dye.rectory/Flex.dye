@@ -1,0 +1,39 @@
+.$ Flex display flex
+.$ iFlex ^ inline-{^}
+
+.$ FlexX|start justifyContent flex-start
+.$ FlexX|center ^ flex-center
+.$ FlexX|end ^ flex-end
+
+.$ FlexY|start alignItems flex-start
+.$ FlexY|center ^ flex-center
+.$ FlexY|end ^ flex-end
+
+.$ FlexW flexWrap wrap
+.$ FlexNW flexWrap nowrap
+
+.$ FxRow flexDirection row
+.$ FxCol ^ column
+
+
+
+.$ FxGrow|0 flexGrow 0
+.$ FxGrow|1 ^ 1
+.$ FxGrow|2 ^ 2
+.$ FxGrow|3 ^ 3
+.$ FxGrow|4 ^ 4
+.$ FxGrow|5 ^ 5
+
+.$ FxShrink|0 flexShrink 0
+.$ FxShrink|1 ^ 1
+.$ FxShrink|2 ^ 2
+.$ FxShrink|3 ^ 3
+.$ FxShrink|4 ^ 4
+.$ FxShrink|5 ^ 5
+
+.$ FxBasis|0 flexBasis 0
+.$ FxBasis|1 ^ 1
+.$ FxBasis|2 ^ 2
+.$ FxBasis|3 ^ 3
+.$ FxBasis|4 ^ 4
+.$ FxBasis|5 ^ 5
