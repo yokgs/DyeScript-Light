@@ -1,21 +1,6 @@
-@ t 56px
+# mypreferences
+@ border3 1rem
+<< mypreferences
+@@ <Radius>
 
-# store 
-
-@@ <Margin> 
-@@ <Colors> store
-
-+ cmd #dc4545
-+ property #367b56
-+ value &blue
-+ text &gray
-+ comment &red
-
-$Margin|1 span
-
-$ span fontFamily monospace color --comment
-
-$ .c color --cmd fontWeight 700
-$ .p color --property
-$ .v color --value
-$ .t color --text
+$Radius|3 body

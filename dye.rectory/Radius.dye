@@ -1,0 +1,42 @@
+=> borders
+
+# borders
+
+!@ radius0 0
+!@ radius1 2px
+!@ radius2 4px
+!@ radius3 8px
+!@ radius4 16px
+!@ radius5 32px
+
+.$ RadiusTL|0,Radius|0,RadiusT|0,RadiusL|0 borderTopLeftRadius &radius0
+.$ RadiusTR|0,Radius|0,RadiusT|0,RadiusR|0 borderTopRightRadius ^
+.$ RadiusBL|0,Radius|0,RadiusB|0,RadiusL|0 borderBottomLeftRadius ^
+.$ RadiusBR|0,Radius|0,RadiusB|0,RadiusR|0 borderBottomRightRadius ^
+
+.$ RadiusTL|1,Radius|1,RadiusT|1,RadiusL|1 borderTopLeftRadius &radius1
+.$ RadiusTR|1,Radius|1,RadiusT|1,RadiusR|1 borderTopRightRadius ^
+.$ RadiusBL|1,Radius|1,RadiusB|1,RadiusL|1 borderBottomLeftRadius ^
+.$ RadiusBR|1,Radius|1,RadiusB|1,RadiusR|1 borderBottomRightRadius ^
+
+.$ RadiusTL|2,Radius|2,RadiusT|2,RadiusL|2 borderTopLeftRadius &radius2
+.$ RadiusTR|2,Radius|2,RadiusT|2,RadiusR|2 borderTopRightRadius ^
+.$ RadiusBL|2,Radius|2,RadiusB|2,RadiusL|2 borderBottomLeftRadius ^
+.$ RadiusBR|2,Radius|2,RadiusB|2,RadiusR|2 borderBottomRightRadius ^
+
+.$ RadiusTL|3,Radius|3,RadiusT|3,RadiusL|3 borderTopLeftRadius &radius3
+.$ RadiusTR|3,Radius|3,RadiusT|3,RadiusR|3 borderTopRightRadius ^
+.$ RadiusBL|3,Radius|3,RadiusB|3,RadiusL|3 borderBottomLeftRadius ^
+.$ RadiusBR|3,Radius|3,RadiusB|3,RadiusR|3 borderBottomRightRadius ^
+
+.$ RadiusTL|4,Radius|4,RadiusT|4,RadiusL|4 borderTopLeftRadius &radius4
+.$ RadiusTR|4,Radius|4,RadiusT|4,RadiusR|4 borderTopRightRadius ^
+.$ RadiusBL|4,Radius|4,RadiusB|4,RadiusL|4 borderBottomLeftRadius ^
+.$ RadiusBR|4,Radius|4,RadiusB|4,RadiusR|4 borderBottomRightRadius ^
+
+.$ RadiusTL|5,Radius|5,RadiusT|5,RadiusL|5 borderTopLeftRadius &radius5
+.$ RadiusTR|5,Radius|5,RadiusT|5,RadiusR|5 borderTopRightRadius ^
+.$ RadiusBL|5,Radius|5,RadiusB|5,RadiusL|5 borderBottomLeftRadius ^
+.$ RadiusBR|5,Radius|5,RadiusB|5,RadiusR|5 borderBottomRightRadius ^
+
+.$ Radius borderTopLeftRadius,borderTopRightRadius,borderBottomLeftRadius,borderBottomRightRadius 9999px 

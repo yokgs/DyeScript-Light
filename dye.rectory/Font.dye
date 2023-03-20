@@ -23,9 +23,10 @@
 .$ Font|Sr ^ .75rem
 .$ Font|S ^ .75em
 
+.$ Font|2Sr ^ .5rem
+.$ Font|2S ^ .5em
+
 .$ Text|L textAlign left
 .$ Text|C ^ center
 .$ Text|R ^ right
 .$ Text|J ^ justify
-
-

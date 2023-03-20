@@ -1,19 +1,28 @@
-.$ Padding|0 padding 0
-.$ PaddingTop|0 {^}Top 0
-.$ PaddingLeft|0 {*}Left 0
-.$ PaddingRight|0 {*}Right 0
-.$ PaddingBottom|0 {*}Bottom 0
+=> paddings
+
+# paddings
+
+!@ padding0 0
+!@ padding1 .25rem
+!@ padding2 .5rem
+!@ padding3 1rem
+
+.$ Padding|0 padding &padding0
+.$ PaddingTop|0 {^}Top ^
+.$ PaddingLeft|0 paddingLeft ^
+.$ PaddingRight|0 paddingRight ^
+.$ PaddingBottom|0 paddingBottom ^
 
 $PaddingTop|0 $PaddingY|0
 $PaddingLeft|0 $PaddingX|0
 $PaddingRight|0 $PaddingX|0
 $PaddingBottom|0 $PaddingY|0
 
-.$ Padding|1 {*} .25rem
-.$ PaddingTop|1 {^}Top .25rem
-.$ PaddingLeft|1 {*}Left .25rem
-.$ PaddingRight|1 {*}Right .25rem
-.$ PaddingBottom|1 {*}Bottom .25rem
+.$ Padding|1 padding &padding1
+.$ PaddingTop|1 {^}Top ^
+.$ PaddingLeft|1 paddingLeft ^
+.$ PaddingRight|1 paddingRight ^
+.$ PaddingBottom|1 paddingBottom ^
 
 $PaddingTop|1 $PaddingY|1
 $PaddingLeft|1 $PaddingX|1
@@ -21,22 +30,22 @@ $PaddingRight|1 $PaddingX|1
 $PaddingBottom|1 $PaddingY|1
 
 
-.$ Padding|2 {*} .5rem
-.$ PaddingTop|2 {^}Top .5rem
-.$ PaddingLeft|2 {*}Left .5rem
-.$ PaddingRight|2 {*}Right .5rem
-.$ PaddingBottom|2 {*}Bottom .5rem
+.$ Padding|2 padding &padding2
+.$ PaddingTop|2 {^}Top ^
+.$ PaddingLeft|2 paddingLeft ^
+.$ PaddingRight|2 paddingRight ^
+.$ PaddingBottom|2 paddingBottom ^
 
 $PaddingTop|2 $PaddingY|2
 $PaddingLeft|2 $PaddingX|2
 $PaddingRight|2 $PaddingX|2
 $PaddingBottom|2 $PaddingY|2
 
-.$ Padding|3 {*} 1rem
-.$ PaddingTop|3 {^}Top 1rem
-.$ PaddingLeft|3 {*}Left 1rem
-.$ PaddingRight|3 {*}Right 1rem
-.$ PaddingBottom|3 {*}Bottom 1rem
+.$ Padding|3 padding &padding3
+.$ PaddingTop|3 {^}Top ^
+.$ PaddingLeft|3 paddingLeft ^
+.$ PaddingRight|3 paddingRight ^
+.$ PaddingBottom|3 paddingBottom ^
 
 $PaddingTop|3 $PaddingY|3
 $PaddingLeft|3 $PaddingX|3

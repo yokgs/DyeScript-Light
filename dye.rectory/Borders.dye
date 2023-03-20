@@ -1,52 +1,40 @@
+=> borders
+
+# borders
+
+!@ border0 0
+!@ border1 1px
+!@ border2 2px
+!@ border3 4px
+!@ border4 8px
+
 .$ nBorder border none
 
 .$ Border|solid borderStyle solid
 .$ Border|dashed ^ dashed
 .$ Border|dotted ^ dotted
 
-.$ BorderTop|0,Border|0,BorderY|0 borderTopWidth 0
-.$ BorderLeft|0,Border|0,BorderX|0 borderLeftWidth 0
-.$ BorderRight|0,Border|0,BorderX|0 borderRightWidth 0
-.$ BorderBottom|0,Border|0,BorderY|0 borderBottomWidth 0
+.$ BorderTop|0,Border|0,BorderY|0 borderTopWidth &border0
+.$ BorderLeft|0,Border|0,BorderX|0 borderLeftWidth ^
+.$ BorderRight|0,Border|0,BorderX|0 borderRightWidth ^
+.$ BorderBottom|0,Border|0,BorderY|0 borderBottomWidth ^
 
-.$ BorderTop|1,Border|1,BorderY|1 borderTopWidth 1px
-.$ BorderLeft|1,Border|1,BorderX|1 borderLeftWidth 1px
-.$ BorderRight|1,Border|1,BorderX|1 borderRightWidth 1px
-.$ BorderBottom|1,Border|1,BorderY|1 borderBottomWidth 1px
+.$ BorderTop|1,Border|1,BorderY|1 borderTopWidth &border1
+.$ BorderLeft|1,Border|1,BorderX|1 borderLeftWidth ^
+.$ BorderRight|1,Border|1,BorderX|1 borderRightWidth ^
+.$ BorderBottom|1,Border|1,BorderY|1 borderBottomWidth ^
 
-.$ BorderTop|2,Border|2,BorderY|2 borderTopWidth 2px
-.$ BorderLeft|2,Border|2,BorderX|2 borderLeftWidth 2px
-.$ BorderRight|2,Border|2,BorderX|2 borderRightWidth 2px
-.$ BorderBottom|2,Border|2,BorderY|2 borderBottomWidth 2px
+.$ BorderTop|2,Border|2,BorderY|2 borderTopWidth &border2
+.$ BorderLeft|2,Border|2,BorderX|2 borderLeftWidth ^
+.$ BorderRight|2,Border|2,BorderX|2 borderRightWidth ^
+.$ BorderBottom|2,Border|2,BorderY|2 borderBottomWidth ^
 
-.$ BorderTop|3,Border|3,BorderY|3 borderTopWidth 4px
-.$ BorderLeft|3,Border|3,BorderX|3 borderLeftWidth 4px
-.$ BorderRight|3,Border|3,BorderX|3 borderRightWidth 4px
-.$ BorderBottom|3,Border|3,BorderY|3 borderBottomWidth 4px
+.$ BorderTop|3,Border|3,BorderY|3 borderTopWidth &border3
+.$ BorderLeft|3,Border|3,BorderX|3 borderLeftWidth ^
+.$ BorderRight|3,Border|3,BorderX|3 borderRightWidth ^
+.$ BorderBottom|3,Border|3,BorderY|3 borderBottomWidth ^
 
-.$ BorderTop|4,Border|4,BorderY|4 borderTopWidth 8px
-.$ BorderLeft|4,Border|4,BorderX|4 borderLeftWidth 8px
-.$ BorderRight|4,Border|4,BorderX|4 borderRightWidth 8px
-.$ BorderBottom|4,Border|4,BorderY|4 borderBottomWidth 8px
-
-.$ RadiusTL|0,Radius|0,RadiusT|0,RadiusL|0 borderTopLeftRadius 0
-.$ RadiusTR|0,Radius|0,RadiusT|0,RadiusR|0 borderTopRightRadius 0
-.$ RadiusBL|0,Radius|0,RadiusB|0,RadiusL|0 borderBottomLeftRadius 0
-.$ RadiusBR|0,Radius|0,RadiusB|0,RadiusR|0 borderBottomRightRadius 0
-
-.$ RadiusTL|1,Radius|1,RadiusT|1,RadiusL|1 borderTopLeftRadius 2px
-.$ RadiusTR|1,Radius|1,RadiusT|1,RadiusR|1 borderTopRightRadius 2px
-.$ RadiusBL|1,Radius|1,RadiusB|1,RadiusL|1 borderBottomLeftRadius 2px
-.$ RadiusBR|1,Radius|1,RadiusB|1,RadiusR|1 borderBottomRightRadius 2px
-
-.$ RadiusTL|2,Radius|2,RadiusT|2,RadiusL|2 borderTopLeftRadius 4px
-.$ RadiusTR|2,Radius|2,RadiusT|2,RadiusR|2 borderTopRightRadius 4px
-.$ RadiusBL|2,Radius|2,RadiusB|2,RadiusL|2 borderBottomLeftRadius 4px
-.$ RadiusBR|2,Radius|2,RadiusB|2,RadiusR|2 borderBottomRightRadius 4px
-
-.$ RadiusTL|4 borderTopLeftRadius 8px
-.$ RadiusTR|4 borderTopRightRadius 8px
-.$ RadiusBL|4 borderBottomLeftRadius 8px
-.$ RadiusBR|4 borderBottomRightRadius 8px
-
-.$ Radius borderTopLeftRadius,borderTopRightRadius,borderBottomLeftRadius,borderBottomRightRadius 9999px 
+.$ BorderTop|4,Border|4,BorderY|4 borderTopWidth &border4
+.$ BorderLeft|4,Border|4,BorderX|4 borderLeftWidth ^
+.$ BorderRight|4,Border|4,BorderX|4 borderRightWidth ^
+.$ BorderBottom|4,Border|4,BorderY|4 borderBottomWidth ^

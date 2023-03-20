@@ -1,19 +1,28 @@
-.$ Margin|0 margin 0
-.$ MarginTop|0 {^}Top 0
-.$ MarginLeft|0 {*}Left 0
-.$ MarginRight|0 {*}Right 0
-.$ MarginBottom|0 {*}Bottom 0
+=> margins
+
+# margins
+
+!@ margin0 0
+!@ margin1 .25rem
+!@ margin2 .5rem
+!@ margin3 1rem
+
+.$ Margin|0 margin &margin0
+.$ MarginTop|0 {^}Top ^
+.$ MarginLeft|0 marginLeft ^
+.$ MarginRight|0 marginRight ^
+.$ MarginBottom|0 marginBottom ^
 
 $MarginTop|0 $MarginY|0
 $MarginLeft|0 $MarginX|0
 $MarginRight|0 $MarginX|0
 $MarginBottom|0 $MarginY|0
 
-.$ Margin|1 {*} .25rem
-.$ MarginTop|1 {^}Top .25rem
-.$ MarginLeft|1 {*}Left .25rem
-.$ MarginRight|1 {*}Right .25rem
-.$ MarginBottom|1 {*}Bottom .25rem
+.$ Margin|1 margin &margin1
+.$ MarginTop|1 {^}Top ^
+.$ MarginLeft|1 marginLeft ^
+.$ MarginRight|1 marginRight ^
+.$ MarginBottom|1 marginBottom ^
 
 $MarginTop|1 $MarginY|1
 $MarginLeft|1 $MarginX|1
@@ -21,22 +30,22 @@ $MarginRight|1 $MarginX|1
 $MarginBottom|1 $MarginY|1
 
 
-.$ Margin|2 {*} .5rem
-.$ MarginTop|2 {^}Top .5rem
-.$ MarginLeft|2 {*}Left .5rem
-.$ MarginRight|2 {*}Right .5rem
-.$ MarginBottom|2 {*}Bottom .5rem
+.$ Margin|2 margin &margin2
+.$ MarginTop|2 {^}Top ^
+.$ MarginLeft|2 marginLeft ^
+.$ MarginRight|2 marginRight ^
+.$ MarginBottom|2 marginBottom ^
 
 $MarginTop|2 $MarginY|2
 $MarginLeft|2 $MarginX|2
 $MarginRight|2 $MarginX|2
 $MarginBottom|2 $MarginY|2
 
-.$ Margin|3 {*} 1rem
-.$ MarginTop|3 {^}Top 1rem
-.$ MarginLeft|3 {*}Left 1rem
-.$ MarginRight|3 {*}Right 1rem
-.$ MarginBottom|3 {*}Bottom 1rem
+.$ Margin|3 margin &margin3
+.$ MarginTop|3 {^}Top ^
+.$ MarginLeft|3 marginLeft ^
+.$ MarginRight|3 marginRight ^
+.$ MarginBottom|3 marginBottom ^
 
 $MarginTop|3 $MarginY|3
 $MarginLeft|3 $MarginX|3
