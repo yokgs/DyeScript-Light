@@ -1,0 +1,31 @@
+.$ Bold fontWeight 700
+.$ Italic fontStyle italic
+.$ Underline fontDecoration underline
+
+.$ Font|4Lr fontSize 3rem
+.$ Font|4L ^ 3em
+
+.$ Font|3Lr ^ 2.5rem
+.$ Font|3L ^ 2.5em
+
+.$ Font|2Lr ^ 2rem
+.$ Font|2L ^ 2em
+
+.$ Font|Lr ^ 1.5rem
+.$ Font|L ^ 1.5em
+
+.$ Font|Mr ^ 1.25rem
+.$ Font|M ^ 1.25em
+
+.$ Font|Nr ^ 1rem
+.$ Font|N ^ 1em
+
+.$ Font|Sr ^ .75rem
+.$ Font|S ^ .75em
+
+.$ Text|L textAlign left
+.$ Text|C ^ center
+.$ Text|R ^ right
+.$ Text|J ^ justify
+
+

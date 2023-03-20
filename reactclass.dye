@@ -1,0 +1,7 @@
+@@ <Borders>
+$ .maincontent backgroundColor red
+$ .container border 0
+
+$BorderY|1 body
+
+$Radius|0 button

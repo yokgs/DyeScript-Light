@@ -1,6 +1,6 @@
 {
   "name": "@yokgs/dyescript-light",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Command Line Interface of lightweight (& pre-published) version of @yokgs/DyeScript",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "author": "Yazid Slila",
   "license": "Apache 2.0",
   "bin": {
-    "dyec": "./index.js"
+    "dyec": "./index.js",
+    "dyeb": "./lib/cli.js"
   },
   "bugs": {
     "url": "https://github.com/yokgs/DyeScript-Light/issues"
@@ -25,6 +26,7 @@
     "url": "git://github.com/yokgs/DyeScript-Light.git"
   },
   "dependencies": {
+    "@yokgs/bluedyejs": "^2.2.0",
     "yargs": "^17.7.1"
   }
 }
