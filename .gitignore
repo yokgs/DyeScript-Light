@@ -1,3 +1,5 @@
 node_modules
 .vscode
 v1.js
+*.dye
+*.css
