@@ -39,4 +39,6 @@
 .$ RadiusBL|5,Radius|5,RadiusB|5,RadiusL|5 borderBottomLeftRadius ^
 .$ RadiusBR|5,Radius|5,RadiusB|5,RadiusR|5 borderBottomRightRadius ^
 
-.$ Radius borderTopLeftRadius,borderTopRightRadius,borderBottomLeftRadius,borderBottomRightRadius 9999px 
+.$ Radius borderTopLeftRadius,borderTopRightRadius,borderBottomLeftRadius,borderBottomRightRadius 9999px
+
+.$ Radius|elipse borderTopLeftRadius,borderTopRightRadius,borderBottomLeftRadius,borderBottomRightRadius 50%

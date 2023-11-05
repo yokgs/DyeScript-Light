@@ -1,6 +1,0 @@
-# mypreferences
-@ border3 1rem
-<< mypreferences
-@@ <Radius>
-
-$Radius|3 body

@@ -1,0 +1,4 @@
+.$ Paused animationState paused
+.$ Playing ^ play
+
+.$ Slow animationDuration 

@@ -1,3 +1,5 @@
+@@ <Borders.static>
+
 => borders
 
 # borders
@@ -7,12 +9,6 @@
 !@ border2 2px
 !@ border3 4px
 !@ border4 8px
-
-.$ nBorder border none
-
-.$ Border|solid borderStyle solid
-.$ Border|dashed ^ dashed
-.$ Border|dotted ^ dotted
 
 .$ BorderTop|0,Border|0,BorderY|0 borderTopWidth &border0
 .$ BorderLeft|0,Border|0,BorderX|0 borderLeftWidth ^

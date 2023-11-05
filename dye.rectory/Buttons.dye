@@ -1,0 +1,26 @@
+@@ <Dye1>
+=> colors
+# ^
+!type color
+!@ primary &blue
+!@ secondary &gray
+!@ warning &yellow
+!@ danger &red
+!@ info &skyblue
+
+$PaddingY|2 $Button
+$PaddingX|3 $Button
+$iBlock $Button
+$Font|Mr $Button
+$Radius|2 $Button
+$nBorder $Button
+.$ Button backgroundColor &primary
+
+$Button $Button|Secondary $Button|Warning $Button|Info $Button|Danger $Button|Rounded
+
+.$ Button|Secondary backgroundColor &secondary
+.$ Button|Warning backgroundColor &warning
+.$ Button|Info backgroundColor &info
+.$ Button|Danger backgroundColor &danger
+
+$Radius $Button|Rounded

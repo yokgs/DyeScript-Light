@@ -1,0 +1,35 @@
+=> preferences
+
+# preferences
+
+!@ space0 0
+!@ space1 .25rem
+!@ space2 .5rem
+!@ space3 1rem
+
+!@ margin0 &space0
+!@ padding0 ^
+
+!@ margin1 &space1
+!@ padding1 ^
+
+!@ margin2 &space2
+!@ padding2 ^
+
+!@ margin3 &space3
+!@ padding3 ^
+
+<< preferences
+@@ <Padding>
+
+<< preferences
+@@ <Margin>
+
+<< preferences
+@@ <Radius>
+
+<< preferences
+@@ <Borders>
+
+@@ <Display>
+@@ <Font>

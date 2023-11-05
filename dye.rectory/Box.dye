@@ -1,0 +1,11 @@
+@@ <Atoms>
+
+!type color
+@ bgcolor white
+
+.$ Box boxSizing border-box
+    backgroundColor &bgcolor
+
+$Padding|2 $Box
+$Radius|2 $Box
+$nBorder $Box

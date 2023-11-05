@@ -1,0 +1,5 @@
+.$ nBorder border none
+
+.$ Border|solid borderStyle solid
+.$ Border|dashed ^ dashed
+.$ Border|dotted ^ dotted

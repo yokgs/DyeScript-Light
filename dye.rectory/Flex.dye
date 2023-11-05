@@ -2,11 +2,11 @@
 .$ iFlex ^ inline-{^}
 
 .$ FlexX|start justifyContent flex-start
-.$ FlexX|center ^ flex-center
+.$ FlexX|center ^ center
 .$ FlexX|end ^ flex-end
 
 .$ FlexY|start alignItems flex-start
-.$ FlexY|center ^ flex-center
+.$ FlexY|center ^ center
 .$ FlexY|end ^ flex-end
 
 .$ FlexW flexWrap wrap
@@ -30,10 +30,3 @@
 .$ FxShrink|3 ^ 3
 .$ FxShrink|4 ^ 4
 .$ FxShrink|5 ^ 5
-
-.$ FxBasis|0 flexBasis 0
-.$ FxBasis|1 ^ 1
-.$ FxBasis|2 ^ 2
-.$ FxBasis|3 ^ 3
-.$ FxBasis|4 ^ 4
-.$ FxBasis|5 ^ 5
