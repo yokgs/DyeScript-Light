@@ -21,6 +21,23 @@ To compile `myfile.dye` and save the resulting css to `/dist/css` folder use the
 dyec -p myfile -o ./dist/css
 ```
 
+For incremental builds, use the -w option:
+
+```sh
+dyec -p myfile -o ./dist/css -w
+```
+
+To specify an appropriate target for the build, use the -t option followed by the target code:
+
+- `-t default`: Generates both regular CSS and minified CSS files (default).
+- `-t c`: Generates a Cascading Style Sheet file (.css).
+- `-t m`: Generates a minified CSS file (.min.css).
+- `-t s`: Generates a Static DyeScript file (.static.dye) (experimental).
+- `-t r`: Generates a React StyleSheet file (.js) (experimental).
+- `-t a`: Generates all supported targets (.css, .dye, and .js) (experimental).
+
+Remember that some targets are experimental and may not be fully supported.
+
 ## Syntax
 
 ### Import (`@@` operator)
@@ -43,14 +60,38 @@ import ./my-buttons
 
 ### Style definitions
 
-Set background red and color black for a button with class 'styled'
+You can define styles using the following syntax:
+
+```dye
+style <selector> <property> <value> <property> <value>...
+```
+
+You can also use the style shorthand version `$`:
+
+```dye
+$ <selector> <property> <value> <property> <value>...
+```
+
+For example, to set the background color to red and the text color to black for a button with the class 'styled':
 
 Similar to CSS styles
 
 ```dye
-$ button.styled backgroundColor red color black
-or
 style button.styled backgroundColor red color black
+```
+
+Or, you can format it like this:
+
+```dye
+$ button.styled backgroundColor red
+    color black
+```
+
+You can attribute the same value to different properties using a concise syntax:
+
+```dye
+$ button color, borderColor black
+$ body margin, padding 0px
 ```
 
 ### DyeScript classes
@@ -62,18 +103,26 @@ Define the class bordered with the following properties
 - border style solid
 
 ```dye
-.$ bordered borderWidth 4px borderColor gold borderStyle solid
-or
-class bordered borderWidth 4px borderColor gold borderStyle solid
+class bordered borderWidth 4px
+    borderColor gold
+    borderStyle solid
 ```
 
-Apply the class bordered to a button, img and .card
+Alternatively, you can use the class shorthand `.$`:
+
+```dye
+.$ bordered borderWidth 4px
+    borderColor gold
+    borderStyle solid
+```
+
+You can apply the bordered class to elements like buttons, images, and elements with the .card class:
 
 ```dye
 $bordered button img .card
 ```
 
-You can also apply the class to another class
+Additionally, you can apply the bordered class to another class:
 
 ```dye
 $bordered $anotherClass
@@ -85,9 +134,7 @@ The class `anotherClass` will inherit all the properties of `bordered`
 
 ### Utility-First Classes
 
-DyeScript provide a bunch of utility classes to speed up the creation of custom styles
-
-Let's recreate the class bordered from the previous example using Utility classes
+DyeScript provides a set of utility classes that accelerate the creation of custom styles. You can recreate the `bordered` class from the previous example using utility classes:
 
 ```dye
 @@ <Borders>
@@ -96,6 +143,62 @@ $Border|3 $bordered
 $Border|solid $bordered
 .$ bordered borderColor gold
 ```
+
+### Animations
+
+DyeScript offers animation support, allowing you to create animations using the `@keyframes` keyword or its shorthand  `@keys`. Here's how you can define an animation:
+
+```dye
+@keyframes <animation name> 
+    <state> <property> <value> 
+    <state> <property> <value>...
+```
+
+For instance, creating a colorful rotation animation:
+
+```dye
+@keyframes colorfull-rotation
+    from rotate 0deg
+    to rotate 359deg
+    from,to backgroundColor red
+    33% backgroundColor green
+    66% backgroundColor blue
+```
+
+You can also associate classes with animation states:
+
+```dye
+.$ Initial rotate 0deg backgroundColor red
+.$ Final rotate 359deg backgroundColor red
+
+@keyframes colorfull-rotation 
+    from $Initial
+    to $Final
+    33% backgroundColor green
+    66% backgroundColor blue
+```
+
+### CSS variables
+
+DyeScript offers a convenient way to define global variables. Instead of the traditional approach:
+
+```dye
+$ :root --primary-color blue --secondary-color gray
+```
+
+You can use the following syntax:
+
+```dye
++ primary-color blue secondary-color gray
+```
+
+When using variables in your styles:
+
+```dye
+$ button.primary backgroundColor --primary-color
+```
+
+instead of `var(--primary-color)`
 
 ## License
 
