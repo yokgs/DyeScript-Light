@@ -1,13 +1,32 @@
 #!/usr/bin/env node
-const yargs = require("yargs");
-const { load } = require("./lib/init");
+
+const yargs = require('yargs');
+const { watcher } = require('./lib/Fetch/watch');
+const { load } = require('./lib/init');
+
 const options = yargs
-    .usage("Usage: -p <path>")
-    .option("p", { alias: "path", describe: "The path of the file", type: "string", demandOption: true })
-    .usage("Usage: -o <path>")
-    .option("o", { alias: "output", describe: "The path of the output directory", type: "string", demandOption: false })
-    .usage("Usage: -t <path>")
-    .option("t", { alias: "target", describe: "The target style", type: "string", demandOption: false })
-    .argv;
-const { path, output, target } = options;
-load(path, output, target);
+  .usage('Usage: dyec -p <path> -o <path> -t <target> -w')
+  .options({
+    p: { alias: 'path', describe: 'The path of the file', demandOption: true, type: 'string' },
+    o: { alias: 'output', describe: 'The path of the output directory', type: 'string' },
+    t: {
+      alias: 'target',
+      describe: 'The target style',
+      choices: ['r', 'a', 'c', 'm', 's'],
+      description: 'r: React StyleSheet; c: CSS; m: minified CSS; s: Static DyeScript; a: All',
+      type: 'string'
+    },
+    w: { alias: 'watch', describe: 'Watch a file', type: 'boolean' },
+    debug: {
+      describe: 'Show all skipped warnings and silent errors',
+      type: 'boolean'
+    }
+  }).argv;
+
+const { path, output, target, watch, debug } = options;
+
+if (watch) {
+  watcher(path, output, target, debug);
+}
+
+load(path, output, target, debug);
